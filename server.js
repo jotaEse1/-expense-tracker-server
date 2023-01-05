@@ -17,7 +17,9 @@ const expense = require('./routes/expense');
 const autentication = require('./routes/autentication')
 
 //server
-app.use(cors())
+app.use(cors({
+    origin: "https://jotaese1.github.io/"
+}))
 app.use(express.urlencoded({extended: false}))
 app.use(express.json())
 
