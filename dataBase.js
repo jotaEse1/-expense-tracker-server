@@ -8,7 +8,10 @@ require('dotenv').config({path: path.resolve('.env')})
 //connection
 mongoose.connect(process.env.MONGO_URI)
     .then(res => console.log('Connected to database'))
-    .catch(err => err)
+    .catch(err => {
+        console.log("error in db")
+        return err
+    })
 
 //schemas
 const transactionSchema = mongoose.Schema({
