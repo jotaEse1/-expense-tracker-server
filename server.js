@@ -28,6 +28,10 @@ app.use(express.json())
 app.use('/api/autentication', autentication)
 app.use('/api/v1', expense)
 
+app.get('/', (req, res) => {
+    res.send(`<h1>Welcome to Expense Tracker app<p>`)
+})
+
 app.use('*', (req, res) => {
     res.status(404).send(`<h1>Error 404</h1> <p>Page not found<p>`)
 })
