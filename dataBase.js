@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 //path
 const path = require('path');
 //dotenv
-require('dotenv').config({path: path.resolve('.env')})
+require('dotenv').config()
 
 //connection
 mongoose.connect(process.env.MONGO_URI)
